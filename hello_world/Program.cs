@@ -34,7 +34,7 @@ namespace hello_world
             int intnum = (int)dou;
             Console.WriteLine("双精度浮点{0}, 单精度浮点{1}， 整形{2}", dou, flo, intnum);
 
-            string num3 = "123.3464456"; /*Convert 的方法*/
+            string num3 = "123.3464456"; /*Convert  的方法*/
             string num4 = "3878943.3423";
             string a = num3 + num4;
             Console.WriteLine(a);
