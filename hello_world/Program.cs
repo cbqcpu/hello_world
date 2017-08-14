@@ -12,9 +12,9 @@ namespace hello_world
         /// 输出字符串
         /// </summary>
         /// <param name="massage"></param>
-        public void show(string massage)
+        public void show_massage(string massage)
         {
-            Console.WriteLine("massage");
+            Console.WriteLine(massage);
         }
 
         static void Main(string[] args)
@@ -64,8 +64,7 @@ namespace hello_world
             int ab = 1;
             Console.WriteLine(ab);
             #endregion
-            
-            
+
 
             Console.ReadKey();
         }
