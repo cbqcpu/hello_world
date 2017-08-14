@@ -8,6 +8,15 @@ namespace hello_world
 {
     class Program
     {
+        /// <summary>
+        /// 输出字符串
+        /// </summary>
+        /// <param name="massage"></param>
+        public void show(string massage)
+        {
+            Console.WriteLine("massage");
+        }
+
         static void Main(string[] args)
         {
             /* my first C# program and tutorial*/
@@ -40,8 +49,23 @@ namespace hello_world
             Console.WriteLine(a);
             double b = Convert.ToDouble(num3) + Convert.ToDouble(num4);
             Console.WriteLine(b);
-            
 
+            int val = 100;
+            object obj = val; //装箱
+            Console.WriteLine("object = {0}", obj);
+            int obj_num = (int)obj; //拆箱
+            Console.WriteLine("object 拆箱后 = {0}", obj_num);
+
+            float docname = 322343.13432F;
+            string country = docname.GetType().Name; //变量类型
+            Console.WriteLine(country);
+
+            #region  折叠注释
+            int ab = 1;
+            Console.WriteLine(ab);
+            #endregion
+            
+            
 
             Console.ReadKey();
         }
