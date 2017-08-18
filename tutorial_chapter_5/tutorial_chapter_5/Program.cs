@@ -83,6 +83,20 @@ namespace tutorial_chapter_5
             cc.PPrint();
             Console.ReadLine();
 
+            Student student = new Student(15);
+            student.show();
+            Console.WriteLine(student.age);
+            Console.ReadLine();
+
+            Goods goods1 = new Goods();
+            Console.WriteLine("请输入物品1的价格");
+            goods1.Price = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("物品1的价格为{0}", goods1.Price);
+            goods1.Promotion = goods1.Price;
+            Console.WriteLine("物品1的优惠价格为{0}", goods1.Promotion);
+
+            Console.ReadLine();
+
         }
     }
     //创建一个父类Father
@@ -115,6 +129,31 @@ namespace tutorial_chapter_5
         public Child()
         {
             Console.WriteLine("子类构造函数被调用了");
+        }
+    }
+
+    //属性的例子
+    public class Goods
+    {
+        public int Price;
+        private int Promotion_price;
+        public int Promotion
+        {
+            get
+            {
+                return Promotion_price;
+            }
+            set
+            {
+                if ((value > 38) && (value < 50))
+                {
+                    Promotion_price = Convert.ToInt32(value * 0.7);
+                }
+                else
+                {
+                    Promotion_price = value;
+                }
+            }
         }
     }
 
